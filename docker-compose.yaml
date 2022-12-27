@@ -6,3 +6,9 @@ services:
       - 8000:8000
     volumes:
       - ./catalog:/src
+  foreign-exchange:
+    build: foreign-exchange
+    ports:
+      - 8001:8001
+    volumes:
+      - ./foreign-exchange:/src
