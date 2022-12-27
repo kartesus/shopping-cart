@@ -1,0 +1,13 @@
+{
+    "id": 12351,
+    "name": "Gucci Marmont Belt",
+    "brand": "Gucci",
+    "description": "Leather belt with a double G buckle and an adjustable fit. Features a vintage-inspired design and a logo-engraved buckle.",
+    "category": "Accessories",
+    "price": { "amount": 50000, "currency": "EUR" },
+    "origin_country": "CN",
+    "main_image": "https://example.com/images/gucci-belt.jpg",
+    "materials": ["leather"],
+    "created_at": "2022-01-06T12:00:00Z",
+    "updated_at": "2022-01-06T12:00:00Z"
+}

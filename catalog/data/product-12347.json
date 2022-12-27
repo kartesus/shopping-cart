@@ -1,0 +1,13 @@
+{
+    "id": 12347,
+    "name": "Rolex Daytona Watch",
+    "brand": "Rolex",
+    "description": "Stainless steel watch with a black dial, chronograph functionality, and a tachymetric scale bezel. Features an automatic movement, a date window at 3 o'clock, and a screw-down crown.",
+    "category": "Watches",
+    "price": { "amount": 150000, "currency": "EUR" },
+    "origin_country": "FR",
+    "main_image": "https://example.com/images/rolex-watch.jpg",
+    "materials": ["stainless steel"],
+    "created_at": "2022-01-03T12:00:00Z",
+    "updated_at": "2022-01-03T12:00:00Z"
+}

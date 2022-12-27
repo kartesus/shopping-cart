@@ -1,0 +1,8 @@
+version: "3"
+services:
+  catalog:
+    build: catalog
+    ports:
+      - 8000:8000
+    volumes:
+      - ./catalog:/src

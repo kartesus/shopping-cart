@@ -1,0 +1,13 @@
+{
+    "id": 12350,
+    "name": "Vintage Diamond Ring",
+    "brand": "Cartier",
+    "description": "Vintage diamond ring featuring a stunning round-cut diamond set in platinum. The ring is accented with small diamonds on the band and has a delicate, elegant design. Comes with a certificate of authenticity.",
+    "category": "Jewelry",
+    "price": { "amount": 250000, "currency": "EUR" },
+    "origin_country": "JP",
+    "main_image": "https://example.com/images/vintage-diamond-ring.jpg",
+    "materials": ["platinum", "diamond"],
+    "created_at": "2022-01-08T12:00:00Z",
+    "updated_at": "2022-01-08T12:00:00Z"
+}
