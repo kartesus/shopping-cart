@@ -2,11 +2,21 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"math/rand"
 	"net/http"
+
+	"github.com/nats-io/nats.go"
 )
 
 func main() {
+	nc, err := nats.Connect("nats")
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	http.HandleFunc("/exchange-rates", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != http.MethodPost {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
@@ -16,6 +26,15 @@ func main() {
 		rates := generateExchangeRates()
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(rates)
+
+		data, err := json.Marshal(rates)
+
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
+		nc.Publish("shop.pricing.exchange-rates", data)
 	})
 
 	http.ListenAndServe(":8001", nil)
