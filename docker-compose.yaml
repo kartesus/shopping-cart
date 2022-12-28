@@ -5,6 +5,10 @@ services:
     ports:
       - 4222:4222
       - 8222:8222
+  redis:
+    image: redis:7-alpine
+    ports:
+      - 6379:6379
   catalog:
     build: catalog
     ports:
@@ -17,3 +21,12 @@ services:
       - 8001:8001
     volumes:
       - ./foreign-exchange:/src
+    depends_on:
+      - nats
+  pricing:
+    build: pricing
+    volumes:
+      - ./pricing:/src
+    depends_on:
+      - redis
+      - nats
